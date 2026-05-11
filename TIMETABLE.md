@@ -39,10 +39,8 @@
 | 5 PM – 8 PM | 3h | Forecasting | **U2 Pt1:** MA, SMA, WMA, exponential smoothing |
 | 8 PM – 9 PM | — | Break | |
 | 9 PM – 12 AM | 3h | Forecasting | **U2 Pt2:** Holt-Winters, decomposition, accuracy metrics |
-| 12 AM – 1 AM | — | Break | |
-| 1 AM – 4 AM | 3h | Forecasting | **U2 Pt3:** Numerical practice — MAE/MSE/MAPE/Theil's U |
 
-> 🛌 Sleep by 4 AM
+> 🛌 Sleep by 12 AM
 
 ---
 
@@ -50,33 +48,33 @@
 
 | Time | Block | Subject | Content |
 |:---|:---|:---|:---|
+| 1 AM – 4 AM | 3h | Forecasting | **U2 Pt3:** Numerical practice — MAE/MSE/MAPE/Theil's U |
 | 12 PM – 3 PM | 3h | Forecasting | **U3 Pt1:** Stationarity, AR(p), MA(q), ACF/PACF patterns |
 | 3 PM – 4 PM | — | Break | |
 | 4 PM – 7 PM | 3h | Forecasting | **U3 Pt2:** Box-Jenkins 4-step, ARIMA identification |
 | 7 PM – 8 PM | — | Break | |
 | 8 PM – 11 PM | 3h | Forecasting | **U3 Pt3:** Derivation drills — AR/MA mean/variance/ACF, Ljung-Box, AIC/SBC |
 | 11 PM – 12 AM | — | Break | |
-| 12 AM – 3 AM | 3h | Forecasting | **U4:** Multiple regression inference, t-test, F-test, Chow test |
-| 3 AM – 4 AM | — | Overflow | Buffer / light review |
 
-> 🛌 Sleep by 4 AM
+> 🛌 Sleep by 4 AM* (U2 Pt3 studied 1-4 AM) then continue 12 PM
 
 ---
 
 ## May 14 — Thursday (DTE Day 1)
 
+> Forecasting U4 studied overnight (12-3 AM)
+
 | Time | Block | Subject | Content |
 |:---|:---|:---|:---|
+| 12 AM – 3 AM | 3h | Forecasting | **U4:** Multiple regression inference, t-test, F-test, Chow test |
 | 12 PM – 3 PM | 3h | DTE | **U1 Pt1:** Demographics, transition phases, age distributions |
 | 3 PM – 4 PM | — | Break | |
 | 4 PM – 7 PM | 3h | DTE | **U1 Pt2:** Missing markets, gender bias, externalities |
 | 7 PM – 8 PM | — | Break | |
 | 8 PM – 11 PM | 3h | DTE | **U1 Pt3:** Harrod-Domar, Solow, Boserup/Kremer — growth models |
 | 11 PM – 12 AM | — | Break | |
-| 12 AM – 3 AM | 3h | DTE | **U2:** Harris-Todaro model, China case study |
-| 3 AM – 4 AM | — | Review | U1 + U2 formula recap |
 
-> 🛌 Sleep by 4 AM
+> 🛌 Sleep by 4 AM* (U4 studied 12-3 AM) then continue 12 PM
 
 ---
 
@@ -84,6 +82,7 @@
 
 | Time | Block | Subject | Content |
 |:---|:---|:---|:---|
+| 12 AM – 3 AM | 3h | DTE | **U2:** Harris-Todaro model, China case study |
 | 12 PM – 3 PM | 3h | DTE | **U3 Pt1:** Land markets, tenancy contracts, Marshallian analysis |
 | 3 PM – 4 PM | — | Break | |
 | 4 PM – 7 PM | 3h | DTE | **U3 Pt2:** Sharecropping inefficiency, credit markets |
@@ -109,11 +108,8 @@
 | 4 PM – 7 PM | 3h | Forecasting | **U5 Pt1:** Spurious regression, cointegration, DF tests |
 | 7 PM – 8 PM | — | Break | |
 | 8 PM – 11 PM | 3h | Forecasting | **U5 Pt2:** ECM derivation, Granger causality F-test |
-| 11 PM – 12 AM | — | Break | |
-| 12 AM – 3 AM | 3h | Forecasting | **U6 + U5 Pt3:** Delphi, groupthink, biases + Johansen test |
-| 3 AM – 4 AM | — | Overflow | U3 derivation drills |
 
-> 🛌 Sleep by 4 AM
+> 🛌 Sleep by 11 PM (early night before final revision day)
 
 ---
 
@@ -121,6 +117,8 @@
 
 | Time | Block | Subject | Content |
 |:---|:---|:---|:---|
+| 12 AM – 3 AM | 3h | Forecasting | **U6 + U5 Pt3:** Delphi, groupthink, biases + Johansen test |
+| 3 AM – 4 AM | — | Overflow | U3 derivation drills — ARIMA tables, write ECM from memory |
 | 12 PM – 3 PM | 3h | Forecasting | **Revise U1+U2:** Formula drill + numericals |
 | 3 PM – 4 PM | — | Break | |
 | 4 PM – 7 PM | 3h | Forecasting | **Revise U3+U4:** ARIMA steps + Chow/F-test problems |
@@ -130,7 +128,7 @@
 | 10:15 PM – 11:30 PM | 1.25h | Forecasting | **Final cram:** U6 bullet points + full formula table |
 | 11:30 PM – 12 AM | — | Wind down | |
 
-> 🛌 **Bed by 12 AM** (pre-Forecasting exam)
+> 🛌 U6+U5 studied 12-4 AM, then **Bed by 12 AM** (pre-Forecasting exam)
 
 ---
 
@@ -146,12 +144,8 @@
 | 4 PM – 7 PM | 3h | Causal | **U1:** Potential outcomes, ATE/ATT/ATU, SUTVA, CIA |
 | 7 PM – 8 PM | — | Break | |
 | 8 PM – 10 PM | 2h | Causal | **U2:** Research design, RCTs, SDO, validity |
-| 10 PM – 11 PM | — | Break | |
-| 11 PM – 2 AM | 3h | Causal | **U3 Pt1:** Logit/probit, marginal effects, odds ratios |
-| 2 AM – 2:30 AM | — | Break | |
-| 2:30 AM – 4 AM | 1.5h | Causal | **U3 Pt2:** IV, Wald, 2SLS, LATE |
 
-> 🛌 Sleep by 4 AM
+> 🛌 Early night (studying U3 overnight into May 19)
 
 ---
 
@@ -159,6 +153,9 @@
 
 | Time | Block | Subject | Content |
 |:---|:---|:---|:---|
+| 11 PM – 2 AM | 3h | Causal | **U3 Pt1:** Logit/probit, marginal effects, odds ratios |
+| 2 AM – 2:30 AM | — | Break | |
+| 2:30 AM – 4 AM | 1.5h | Causal | **U3 Pt2:** IV, Wald, 2SLS, LATE |
 | 12 PM – 3 PM | 3h | Causal | **U3 Pt2 cont:** Weak instruments, problem solving |
 | 3 PM – 4 PM | — | Break | |
 | 4 PM – 7 PM | 3h | Causal | **U4 Pt1:** Matching, PSM, DiD — parallel trends |
@@ -168,7 +165,7 @@
 | 10:15 PM – 11:30 PM | 1.25h | Causal | Formulas + assumptions + pitfalls cram |
 | 11:30 PM – 12 AM | — | Wind down | |
 
-> 🛌 **Bed by 12 AM** (pre-Causal exam)
+> 🛌 **Bed by 12 AM** (pre-Causal exam) — U3 studied overnight at 11 PM-4 AM
 
 ---
 
