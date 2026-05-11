@@ -272,7 +272,7 @@ with st.sidebar:
     username_input = st.text_input(
         "Enter your name",
         value=st.session_state.username,
-        placeholder="e.g. alice",
+        placeholder="e.g. your name",
         help="Case-sensitive. Bookmark your URL after entering.",
     )
 

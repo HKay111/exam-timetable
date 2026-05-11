@@ -48,30 +48,6 @@ Free JSON storage API. No SQL needed.
       "name": "Hkay",
       "done": [],
       "last_seen": "2026-05-12T00:00:00Z"
-    },
-    "alice": {
-      "role": "user",
-      "name": "Alice",
-      "done": [],
-      "last_seen": "2026-05-12T00:00:00Z"
-    },
-    "bob": {
-      "role": "user",
-      "name": "Bob",
-      "done": [],
-      "last_seen": "2026-05-12T00:00:00Z"
-    },
-    "charlie": {
-      "role": "user",
-      "name": "Charlie",
-      "done": [],
-      "last_seen": "2026-05-12T00:00:00Z"
-    },
-    "diana": {
-      "role": "user",
-      "name": "Diana",
-      "done": [],
-      "last_seen": "2026-05-12T00:00:00Z"
     }
   }
 }
@@ -100,9 +76,9 @@ exam-timetable/
 
 - User enters their name in a text input
 - No password required
-- Names are case-sensitive (alice ≠ Alice)
+- Names are case-sensitive (Hkay ≠ hkay)
 - Admin username = `hkay` (hardcoded)
-- URL updates to `?user=alice` — bookmark this to persist
+- URL updates to `?user=yourname` — bookmark this to persist
 - If username doesn't exist in JSONBin data, user is prompted to register (adds to JSONBin)
 - If username exists, their progress loads from JSONBin
 
@@ -130,14 +106,14 @@ Per subject, shown as:
 
 ### 4. Admin Dashboard (only visible to user=`hkay`)
 
-- Table of all 5 users
+- Table of all users
 - For each user: name, role, total blocks done, % per subject, last seen timestamp
 - "Refresh" button to pull latest from JSONBin
 - "View All" expands to show which specific blocks each user has checked
 
 ### 5. Sharing
 
-- User's URL includes `?user=alice` in the query params
+- User's URL includes `?user=yourname` in the query params
 - Copy button next to the shareable URL
 - Friends open URL, type their name, get their own progress
 
@@ -190,7 +166,7 @@ Date short format: `d12` = May 12, `d13` = May 13, ..., `d20` = May 20
 │  📚 Exam Study Tracker    [hkay] [⚙️]   │
 │  ──────────────────────────────────────  │
 │  [Your name: ____________] [→]          │
-│  Share: https://.../?user=alice          │
+│  Share: https://.../?user=yourname          │
 ├──────────────────────────────────────────┤
 │  🟢 Forecasting   8/22  ████░░░░░ 36%     │
 │  🟡 DTE          5/14  ████░░░░░ 36%     │
@@ -210,7 +186,6 @@ Date short format: `d12` = May 12, `d13` = May 13, ..., `d20` = May 20
 │  ┌────────────────────────────────────┐  │
 │  │ User     | Done | %    | Last seen   │  │
 │  │ hkay     | 13   | 27%  | 2 min ago  │  │
-│  │ alice    |  8   | 18%  | 1 hr ago    │  │
 │  └────────────────────────────────────┘  │
 └──────────────────────────────────────────┘
 ```
@@ -292,22 +267,20 @@ Or use `.env` file with `python-dotenv`.
 
 ## User Stories
 
-1. **Alice opens the app for the first time**
-   - Enters "alice" → sees empty timetable with all boxes unchecked
+1. **Friend opens the app for the first time**
+   - Enters their name → sees empty timetable with all boxes unchecked
    - Checks "d12u1" → JSONBin updates, box gets strikethrough
-   - She bookmarks the URL or copies share link
+   - They bookmark the URL or copies share link
 
-2. **Bob opens his progress from yesterday**
-   - Pastes URL with `?user=bob` → his checks from yesterday are restored
-   - He unchecks a block he didn't actually finish → JSONBin updates
+2. **Friend returns to their progress from yesterday**
+   - Pastes URL with `?user=theirname` → their checks from yesterday are restored
+   - They uncheck a block they didn't actually finish → JSONBin updates
 
 3. **HKay (admin) checks everyone's progress**
    - Logs in as "hkay" → admin dashboard visible
-   - Sees Alice: 8 blocks, Bob: 3 blocks, Charlie: 0 blocks
-   - Can see which specific blocks each person has done
-   - Sees last_seen timestamps — knows who's active
+   - Sees each user's blocks done and last_seen timestamps
 
-4. **Friend (no account) joins**
+4. **New friend joins**
    - Opens app URL → enters any name → starts fresh
    - Their name auto-added to JSONBin users list on first check
 

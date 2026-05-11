@@ -23,17 +23,8 @@ streamlit run app.py
 
 ```json
 {
-  "metadata": {
-    "created": "2026-05-12T00:00:00Z",
-    "last_updated": "2026-05-12T00:00:00Z"
-  },
-  "users": {
-    "hkay": {"role": "admin", "name": "Hkay", "done": [], "last_seen": "2026-05-12T00:00:00Z"},
-    "alice": {"role": "user", "name": "Alice", "done": [], "last_seen": "2026-05-12T00:00:00Z"},
-    "bob": {"role": "user", "name": "Bob", "done": [], "last_seen": "2026-05-12T00:00:00Z"},
-    "charlie": {"role": "user", "name": "Charlie", "done": [], "last_seen": "2026-05-12T00:00:00Z"},
-    "diana": {"role": "user", "name": "Diana", "done": [], "last_seen": "2026-05-12T00:00:00Z"}
-  }
+  "metadata": {"created": "2026-05-12T00:00:00Z", "last_updated": "2026-05-12T00:00:00Z"},
+  "users": {}
 }
 ```
 
@@ -74,12 +65,8 @@ streamlit run app.py
 | Username | Role |
 |:---|:---|
 | `hkay` | Admin (see everyone's progress) |
-| `alice` | User |
-| `bob` | User |
-| `charlie` | User |
-| `diana` | User |
 
-Any other name can be used — it auto-registers on first use.
+Any name auto-registers on first use. Enter your name to start tracking.
 
 ---
 

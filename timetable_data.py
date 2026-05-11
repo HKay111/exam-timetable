@@ -402,8 +402,8 @@ SUBJECTS = {
     },
 }
 
-# Pre-defined user list (5 people)
-DEFAULT_USERS = ["hkay", "alice", "bob", "charlie", "diana"]
+# Pre-defined user list (admin only by default)
+DEFAULT_USERS = ["hkay"]
 
 # Admin username
 ADMIN_USER = "hkay"
