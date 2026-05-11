@@ -385,8 +385,21 @@ st.divider()
 if st.session_state.username == ADMIN_USER:
     st.markdown("### ⚙️ Admin Dashboard — All Users")
     users_data = st.session_state.data.get("users", {})
+
+    # Clean stale users (not in DEFAULT_USERS)
+    stale = [u for u in users_data if u not in DEFAULT_USERS]
+    if stale:
+        for u in stale:
+            del st.session_state.data["users"][u]
+        save_data(st.session_state.data)
+        st.rerun()
+
     admin_rows = []
-    for u_name, u_info in users_data.items():
+    for u_name in DEFAULT_USERS:
+        if u_name not in users_data:
+            continue
+        u_info = users_data[u_name]
+        display = USER_DISPLAY_NAMES.get(u_name, u_name)
         u_done = u_info.get("done", [])
         u_stats = get_subject_stats(u_done)
         total_done = len(u_done)
@@ -405,7 +418,7 @@ if st.session_state.username == ADMIN_USER:
         except Exception:
             ago = last_seen
         admin_rows.append({
-            "user": u_name,
+            "user": display,
             "role": "👑" if u_info.get("role") == "admin" else "👤",
             "done": total_done,
             "pct": f"{overall_pct}%",
