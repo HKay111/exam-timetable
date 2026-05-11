@@ -10,7 +10,8 @@ import requests
 from datetime import datetime
 
 from timetable_data import (
-    TIMETABLE, SUBJECTS, ADMIN_USER, get_blocks_by_date, get_subject_stats
+    TIMETABLE, SUBJECTS, ADMIN_USER, DEFAULT_USERS, USER_DISPLAY_NAMES,
+    get_blocks_by_date, get_subject_stats
 )
 
 # ─────────────────────────────────────────────
@@ -242,6 +243,16 @@ if "_first_load" not in st.session_state:
 if st.session_state.data is None:
     st.session_state.data = load_data()
 
+# Ensure all default users exist in the data
+if st.session_state.data:
+    needs_save = False
+    for u in DEFAULT_USERS:
+        if u not in st.session_state.data.get("users", {}):
+            init_user(st.session_state.data, u)
+            needs_save = True
+    if needs_save:
+        save_data(st.session_state.data)
+
 # ─────────────────────────────────────────────
 # UI Starts
 # ─────────────────────────────────────────────
@@ -269,22 +280,46 @@ if not JSONBIN_URL or not API_KEY:
 
 with st.sidebar:
     st.subheader("👤 Your Profile")
-    username_input = st.text_input(
-        "Enter your name",
-        value=st.session_state.username,
-        placeholder="e.g. your name",
-        help="Case-sensitive. Bookmark your URL after entering.",
+
+    # Build dropdown options: display name -> lowercase key
+    user_options = {USER_DISPLAY_NAMES[k]: k for k in DEFAULT_USERS}
+
+    # Normalize URL param if present
+    if st.session_state.username:
+        url_user = st.session_state.username.lower()
+        matched_display = None
+        for display, key in user_options.items():
+            if key == url_user:
+                matched_display = display
+                break
+        if matched_display:
+            st.session_state.username = url_user
+        else:
+            st.session_state.username = ""
+
+    selected_display = st.selectbox(
+        "Select your name",
+        options=list(user_options.keys()),
+        index=(
+            list(user_options.keys()).index(
+                next(d for d, k in user_options.items() if k == st.session_state.username)
+            )
+            if st.session_state.username and st.session_state.username in user_options.values()
+            else 0
+        ),
+        help="Choose your name from the list.",
     )
 
-    if username_input:
-        st.session_state.username = username_input
+    if selected_display:
+        selected_key = user_options[selected_display]
+        st.session_state.username = selected_key
         try:
-            st.experimental_set_query_params(user=username_input)
+            st.experimental_set_query_params(user=selected_key)
         except Exception:
             pass
         if st.session_state.data:
-            init_user(st.session_state.data, username_input)
-            st.session_state.done = get_user_done(st.session_state.data, username_input)
+            init_user(st.session_state.data, selected_key)
+            st.session_state.done = get_user_done(st.session_state.data, selected_key)
 
     st.divider()
     st.subheader("🔍 Filter")
@@ -336,9 +371,10 @@ for i, (subj, (done, total)) in enumerate(stats.items()):
 
 # Share link
 if st.session_state.username:
+    display_name = USER_DISPLAY_NAMES.get(st.session_state.username, st.session_state.username)
     st.caption(f"🔗 Your URL: `?user={st.session_state.username}` — bookmark this!")
 else:
-    st.info("Enter your name in the sidebar to get a shareable link.")
+    st.info("Select your name from the sidebar.")
 
 st.divider()
 

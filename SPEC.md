@@ -72,14 +72,13 @@ exam-timetable/
 
 ## Features
 
-### 1. User Login (Free-text username)
+### 1. User Login (Dropdown selection)
 
-- User enters their name in a text input
-- No password required
-- Names are case-sensitive (Hkay ≠ hkay)
+- Dropdown selection from predefined user list (HKay, Mayank, Rishabh, Aniket, Ashi)
+- No password required, case-insensitive
 - Admin username = `hkay` (hardcoded)
 - URL updates to `?user=yourname` — bookmark this to persist
-- If username doesn't exist in JSONBin data, user is prompted to register (adds to JSONBin)
+- Each user auto-initializes in JSONBin on first load (no manual setup)
 - If username exists, their progress loads from JSONBin
 
 ### 2. Main Timetable View
@@ -113,9 +112,9 @@ Per subject, shown as:
 
 ### 5. Sharing
 
-- User's URL includes `?user=yourname` in the query params
+- User selects their name from the dropdown. URL updates to `?user=yourname`.
 - Copy button next to the shareable URL
-- Friends open URL, type their name, get their own progress
+- Friends open URL, see their name auto-selected in dropdown, track their own progress
 
 ---
 
@@ -268,21 +267,17 @@ Or use `.env` file with `python-dotenv`.
 ## User Stories
 
 1. **Friend opens the app for the first time**
-   - Enters their name → sees empty timetable with all boxes unchecked
+   - Selects their name from the dropdown → sees empty timetable with all boxes unchecked
    - Checks "d12u1" → JSONBin updates, box gets strikethrough
    - They bookmark the URL or copies share link
 
 2. **Friend returns to their progress from yesterday**
-   - Pastes URL with `?user=theirname` → their checks from yesterday are restored
+   - Pastes URL with `?user=theirname` → their checks from yesterday are restored, their name auto-selected in dropdown
    - They uncheck a block they didn't actually finish → JSONBin updates
 
 3. **HKay (admin) checks everyone's progress**
-   - Logs in as "hkay" → admin dashboard visible
+   - Selects "HKay" from dropdown → admin dashboard visible
    - Sees each user's blocks done and last_seen timestamps
-
-4. **New friend joins**
-   - Opens app URL → enters any name → starts fresh
-   - Their name auto-added to JSONBin users list on first check
 
 ---
 

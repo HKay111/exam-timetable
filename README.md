@@ -52,21 +52,21 @@ streamlit run app.py
 
 | Action | How |
 |:---|:---|
-| Start tracking | Enter your name in the sidebar |
+| Start tracking | Select your name from the dropdown in the sidebar |
 | Check a block done | Click the checkbox next to any study block |
 | Share with friends | Give them your URL with `?user=yourname` appended |
-| Admin dashboard | Log in as `hkay` to see all 5 users' progress |
+| Admin dashboard | Log in as `HKay` to see all users' progress |
 | Reset your progress | Click "Reset My Progress" in sidebar |
-
----
 
 ## Users
 
-| Username | Role |
+| Name | Role |
 |:---|:---|
-| `hkay` | Admin (see everyone's progress) |
-
-Any name auto-registers on first use. Enter your name to start tracking.
+| HKay | Admin (see everyone's progress) |
+| Mayank | User |
+| Rishabh | User |
+| Aniket | User |
+| Ashi | User |
 
 ---
 

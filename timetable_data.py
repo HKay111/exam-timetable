@@ -402,11 +402,20 @@ SUBJECTS = {
     },
 }
 
-# Pre-defined user list (admin only by default)
-DEFAULT_USERS = ["hkay"]
+# Pre-defined user list
+ADMIN_USER = "hkay"
+DEFAULT_USERS = [ADMIN_USER, "mayank", "rishabh", "aniket", "ashi"]
+
+# Display names mapping
+USER_DISPLAY_NAMES = {
+    "hkay": "HKay",
+    "mayank": "Mayank",
+    "rishabh": "Rishabh",
+    "aniket": "Aniket",
+    "ashi": "Ashi",
+}
 
 # Admin username
-ADMIN_USER = "hkay"
 
 def get_blocks_by_date():
     """Returns dict of date -> list of blocks, sorted by time."""
