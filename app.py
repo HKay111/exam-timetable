@@ -90,15 +90,8 @@ def update_user_done(data, username, done_list):
 
 def get_shareable_url(username):
     """Returns the current page URL with user param."""
-    import streamlit as st
     try:
-        idx = st.context?.get("page_index", 0)
-    except Exception:
-        idx = 0
-    # Use query params
-    qs = f"?user={username}"
-    try:
-        return st.experimental_get_query_params().get("_page_url", [""])[0] + qs
+        return f"?user={username}"
     except Exception:
         return f"?user={username}"
 
