@@ -74,7 +74,7 @@ def init_user(data, username):
             "role": "user",
             "name": username,
             "done": [],
-            "last_seen": datetime.utcnow().isoformat(),
+            "last_seen": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S"),
         }
 
 def get_user_done(data, username):
@@ -83,8 +83,8 @@ def get_user_done(data, username):
 def update_user_done(data, username, done_list):
     if username in data.get("users", {}):
         data["users"][username]["done"] = done_list
-        data["users"][username]["last_seen"] = datetime.utcnow().isoformat()
-        data["metadata"]["last_updated"] = datetime.utcnow().isoformat()
+        data["users"][username]["last_seen"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S")
+        data["metadata"]["last_updated"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S")
 
 def get_time_band(time_str):
     """Classify a block's start time into a time band for the grid."""
@@ -407,9 +407,14 @@ if st.session_state.username == ADMIN_USER:
         overall_pct = int(100 * total_done / total_possible) if total_possible else 0
         last_seen = u_info.get("last_seen", "never")
         try:
-            last_dt = datetime.fromisoformat(last_seen)
-            diff = datetime.utcnow() - last_dt
-            if diff.total_seconds() < 60:
+            # Handle both "2026-05-12T00:00:00Z" and "2026-05-12T00:00:00.123456"
+            ts = last_seen.replace("Z", "").split(".")[0]
+            last_dt = datetime.strptime(ts, "%Y-%m-%dT%H:%M:%S")
+            now = datetime.utcnow()
+            diff = now - last_dt
+            if diff.total_seconds() < 0:
+                ago = "just now"
+            elif diff.total_seconds() < 60:
                 ago = "just now"
             elif diff.total_seconds() < 3600:
                 ago = f"{int(diff.total_seconds()/60)}m ago"
