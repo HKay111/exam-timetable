@@ -321,6 +321,14 @@ with st.sidebar:
             init_user(st.session_state.data, selected_key)
             st.session_state.done = get_user_done(st.session_state.data, selected_key)
 
+    st.markdown(
+        '<a href="https://meet.google.com/kqq-dabg-tee" target="_blank" '
+        'style="display:block;text-align:center;padding:10px 0;margin:12px 0;'
+        'background:#00C853;color:#0E1117;border-radius:8px;font-weight:600;text-decoration:none;'
+        'font-size:15px;">📹 Join Study Room</a>',
+        unsafe_allow_html=True,
+    )
+
     st.divider()
     st.subheader("🔍 Filter")
     filter_choice = st.radio(
