@@ -60,36 +60,35 @@
 | 1 PM – 2:30 PM | 1.5 | **U1:** Six considerations, loss functions, forecast horizons |
 | 2:30 PM – 3 PM | — | Break |
 | 3 PM – 4:30 PM | 1.5 | **U6:** Qualitative methods — Delphi, groupthink, biases, memory dump |
-| 4:30 PM – 5 PM | — | Break |
-| 5 PM – 7 PM | 2 | **U2 Pt1:** MA, SMA, WMA, exponential smoothing, Holt-Winters |
-| 7 PM – 8 PM | — | Break |
-| 8 PM – 10 PM | 2 | **U2 Pt2:** Decomposition, accuracy metrics (MAE/MSE/MAPE/Theil's U), numericals |
-| 10 PM – 11 PM | — | Break |
-| 11 PM – 1 AM | 2 | **U3 Pt1:** Stationarity, AR(p), MA(q), ACF/PACF patterns |
-| 1 AM – 2:30 AM | 1.5 | **U3 Pt2:** Box-Jenkins 4-step methodology start |
+| 4:30 PM – 6:30 PM | — | Break |
+| 6:30 PM – 8 PM | 1.5 | **U2 Pt1:** MA, SMA, WMA, exponential smoothing, Holt-Winters |
+| 8 PM – 8:30 PM | — | Break |
+| 8:30 PM – 10 PM | 1.5 | **U2 Pt2:** Decomposition, accuracy metrics (MAE/MSE/MAPE/Theil's U), numericals |
+| 10 PM – 10:30 PM | — | Break |
+| 10:30 PM – 12 AM | 1.5 | **U4:** Regression inference — t-test, F-test, Chow test |
+| **12 AM** | 🛌 | **Done for the night.** |
 
-> 🛌 Sleep by 2:30 AM (college in the morning)
 > 💡 U1 + U6 = both 10-mark compulsory sections — knocked out in first 3 hours.
+> U2 + U4 = Section 2 (30 marks) — paired together in one evening.
 
 ---
 
-### 🟢 May 13 (Wed) — Forecasting Day 2 *(start 4 PM, college in AM)*
+### 🟢 May 13 (Wed) — Forecasting Day 2 *(U3+U5 pairing, 4 PM start)*
 
-> U3 Pt2 studied overnight (1 AM – 2:30 AM from May 12). College during the day.
+> College during the day. Study starts at 4 PM. Short breaks (10-15 min).
 
 | Time | Hrs | What |
 |:---|:---:|:---|
-| 4 PM – 6 PM | 2 | **U3 Pt2 finish + U3 Pt3:** Box-Jenkins tables + AR/MA derivations |
+| 4 PM – 6 PM | 2 | **U3 Pt1:** Stationarity, AR(p), MA(q), ACF/PACF patterns |
 | 6 PM – 7 PM | — | Break |
-| 7 PM – 9 PM | 2 | **U4:** Multiple regression inference, t-test, F-test, Chow test |
+| 7 PM – 9 PM | 2 | **U3 Pt2:** Box-Jenkins 4-step, ARIMA tables, derivation drills |
 | 9 PM – 9:15 PM | — | Short break |
-| 9:15 PM – 11:15 PM | 2 | **U5 Pt1:** Spurious regression, cointegration, Dickey-Fuller tests |
+| 9:15 PM – 11:15 PM | 2 | **U5 Pt1:** Cointegration, Dickey-Fuller tests |
 | 11:15 PM – 11:30 PM | — | Short break |
-| 11:30 PM – 2 AM | 2.5 | **U5 Pt2:** ECM derivation, Granger causality F-test, Johansen test |
-| 2 AM – 2:15 AM | — | Short break |
-| 2:15 AM – 3:45 AM | 1.5 | **Overflow buffer:** Extra practice if behind |
+| 11:30 PM – 1:30 AM | 2 | **U5 Pt2:** ECM derivation, Granger causality, Johansen test |
 
-> 🛌 Sleep by 4 AM | If Forecasting core complete → study Causal pre-work in buffer
+> 🛌 Sleep by 4 AM (or earlier if done)
+> U3 + U5 = Section 3 (40 marks) — paired together.
 
 **Forecasting core complete:** U1+U2+U3+U4+U5+U6 = ~19h total. May 12-13 provides ~21h. If done early, remaining time = **Causal pre-work** (U1+U2).
 
@@ -250,7 +249,7 @@
 | Forecasting revision done early on May 16-17 | Extra rest or deeper review, no subject change |
 | Causal core done early on May 18-19 | More revision/practice problems, no subject change |
 
-**Forecasting core = U1 + U2 + U3 + U4 + U5 + U6** (~17h)
+**Forecasting core = U1 + U2 + U3 + U4 + U5 + U6** (~15.5h)
 **Causal pre-work = U1 + U2** (~3h)
 **DTE has no pivot** (only 2 days, exam on May 16)
 
