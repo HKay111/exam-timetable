@@ -482,6 +482,23 @@ USER_DISPLAY_NAMES = {
 
 # Admin username
 
+def _time_sort_key(block):
+    """Convert block start time to 24-hour float for proper sorting."""
+    start = block["time"].split("–")[0].strip()
+    if ":" in start:
+        parts = start.split()
+        hour = int(parts[0].split(":")[0])
+        minute = int(parts[0].split(":")[1])
+        meridiem = parts[1]
+    else:
+        parts = start.split()
+        hour = int(parts[0])
+        meridiem = parts[1] if len(parts) > 1 else ""
+        minute = 0
+    if meridiem == "AM":
+        return (0 if hour == 12 else hour) + minute / 60.0
+    return (12 if hour == 12 else hour + 12) + minute / 60.0
+
 def get_blocks_by_date():
     """Returns dict of date -> list of blocks, sorted by time."""
     by_date = {}
@@ -490,9 +507,8 @@ def get_blocks_by_date():
         if date not in by_date:
             by_date[date] = []
         by_date[date].append(block)
-    # Sort each date's blocks by time (daytime before nighttime)
     for date in by_date:
-        by_date[date].sort(key=lambda b: (b["time"].split(" ")[0], b["time"]))
+        by_date[date].sort(key=_time_sort_key)
     return by_date
 
 def get_blocks_by_subject(subject):
