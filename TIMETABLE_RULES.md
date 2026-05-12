@@ -61,9 +61,9 @@
 | 2:30 PM – 3 PM | — | Break |
 | 3 PM – 4:30 PM | 1.5 | **U6:** Qualitative methods — Delphi, groupthink, biases, memory dump |
 | 4:30 PM – 8 PM | — | Free / rest |
-| 8 PM – 9:15 PM | 1.25 | **U2 Pt1:** MA, SMA, WMA, exponential smoothing, Holt-Winters |
+| 8 PM – 9:15 PM | 1.25 | **U2 Pt1:** MA, SMA, WMA, forecast accuracy metrics (MAE/MSE/MAPE/Theil's U) |
 | 9:15 PM – 9:30 PM | — | Break |
-| 9:30 PM – 10:45 PM | 1.25 | **U2 Pt2:** Decomposition, accuracy metrics (MAE/MSE/MAPE/Theil's U), numericals |
+| 9:30 PM – 10:45 PM | 1.25 | **U2 Pt2:** Exponential smoothing, Holt-Winters, decomposition methods + numericals |
 | 10:45 PM – 11 PM | — | Break |
 | 11 PM – 12:30 AM | 1.5 | **U4:** Regression inference — t-test, F-test, Chow test |
 | **12:30 AM** | 🛌 | **Done for the night.** |

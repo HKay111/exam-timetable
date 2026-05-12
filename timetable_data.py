@@ -33,7 +33,7 @@ TIMETABLE = [
         "time": "8 PM – 9:15 PM",
         "subject": "forecasting",
         "unit": "U2 Pt1",
-        "content": "MA, SMA, WMA, exponential smoothing, Holt-Winters",
+        "content": "MA, SMA, WMA, forecast accuracy metrics (MAE/MSE/MAPE/Theil's U)",
         "duration_hours": 1.25,
     },
     {
@@ -43,7 +43,7 @@ TIMETABLE = [
         "time": "9:30 PM – 10:45 PM",
         "subject": "forecasting",
         "unit": "U2 Pt2",
-        "content": "Decomposition, forecast accuracy metrics + numericals",
+        "content": "Exponential smoothing, Holt-Winters, decomposition methods + numericals",
         "duration_hours": 1.25,
     },
     {
