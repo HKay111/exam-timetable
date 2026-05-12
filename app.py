@@ -10,7 +10,7 @@ import requests
 from datetime import datetime
 
 from timetable_data import (
-    TIMETABLE, SUBJECTS, ADMIN_USER, DEFAULT_USERS, USER_DISPLAY_NAMES,
+    TIMETABLE, SUBJECTS, ADMIN_USER, DEFAULT_USERS, USER_DISPLAY_NAMES, EXAM_STRUCTURE,
     get_blocks_by_date, get_subject_stats
 )
 
@@ -352,6 +352,26 @@ with st.container():
     st.caption("Hover over a block for details · 📝 = Exam day")
 
 st.divider()
+
+# ─────────────────────────────────────────────
+# 1.5 EXAM STRUCTURE
+# ─────────────────────────────────────────────
+
+with st.expander("📋 Exam Structure — Mark Breakdown"):
+    for subj_key, struct in EXAM_STRUCTURE.items():
+        meta = SUBJECTS[subj_key]
+        st.markdown(f"**{struct['emoji']} {struct['label']} — {struct['total_marks']} marks**")
+        rows = []
+        for sec in struct["sections"]:
+            units_str = " + ".join(sec["units"])
+            rows.append(f"| {sec['name']} | {sec['marks']} | {units_str} | {sec['type']} |")
+        header = "| Section | Marks | Units | Type |\n| :--- | :---: | :--- | :--- |\n"
+        st.markdown(header + "\n".join(rows))
+        if subj_key == "forecasting":
+            st.caption("💡 U1 and U6 are compulsory 10-mark each — knock them out first.")
+        elif subj_key == "causal":
+            st.caption("💡 U3 and U4 carry 72/90 marks — focus here. U5 is project-only, not in exam.")
+        st.divider()
 
 # ─────────────────────────────────────────────
 # 2. PROGRESS BARS

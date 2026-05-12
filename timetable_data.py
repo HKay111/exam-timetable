@@ -5,7 +5,7 @@ Block IDs: {date_short}{unit_label} e.g. d12u1, d13u3pt2, d20u1
 """
 
 TIMETABLE = [
-    # ===== MAY 12 — FORECASTING DAY 1 (start 1 PM) =====
+    # ===== MAY 12 — FORECASTING DAY 1 (1 PM start) =====
     {
         "id": "d12u1",
         "date": "May 12",
@@ -17,10 +17,20 @@ TIMETABLE = [
         "duration_hours": 1.5,
     },
     {
+        "id": "d12u6",
+        "date": "May 12",
+        "day": "Tue",
+        "time": "3 PM – 4:30 PM",
+        "subject": "forecasting",
+        "unit": "U6",
+        "content": "Qualitative methods — Delphi, groupthink, biases, memory dump",
+        "duration_hours": 1.5,
+    },
+    {
         "id": "d12u2pt1",
         "date": "May 12",
         "day": "Tue",
-        "time": "3 PM – 5 PM",
+        "time": "5 PM – 7 PM",
         "subject": "forecasting",
         "unit": "U2 Pt1",
         "content": "MA, SMA, WMA, exponential smoothing, Holt-Winters",
@@ -30,7 +40,7 @@ TIMETABLE = [
         "id": "d12u2pt2",
         "date": "May 12",
         "day": "Tue",
-        "time": "6 PM – 8 PM",
+        "time": "8 PM – 10 PM",
         "subject": "forecasting",
         "unit": "U2 Pt2",
         "content": "Decomposition, forecast accuracy metrics + numericals",
@@ -40,7 +50,7 @@ TIMETABLE = [
         "id": "d12u3pt1",
         "date": "May 12",
         "day": "Tue",
-        "time": "9 PM – 12 AM",
+        "time": "11 PM – 2 AM",
         "subject": "forecasting",
         "unit": "U3 Pt1",
         "content": "Stationarity, AR(p), MA(q), ACF/PACF patterns",
@@ -50,22 +60,22 @@ TIMETABLE = [
         "id": "d12u3pt2",
         "date": "May 13",
         "day": "Wed",
-        "time": "1 AM – 4 AM",
+        "time": "2 AM – 4 AM",
         "subject": "forecasting",
         "unit": "U3 Pt2",
-        "content": "Box-Jenkins 4-step methodology, ARIMA identification",
-        "duration_hours": 3,
+        "content": "Box-Jenkins 4-step methodology start",
+        "duration_hours": 2,
     },
 
     # ===== MAY 13 — FORECASTING DAY 2 =====
     {
-        "id": "d13u3pt3",
+        "id": "d13u3pt2finish",
         "date": "May 13",
         "day": "Wed",
         "time": "12 PM – 1 PM",
         "subject": "forecasting",
-        "unit": "U3 Pt3",
-        "content": "Derivation drills — AR/MA mean/variance/ACF, Ljung-Box, AIC/SBC",
+        "unit": "U3 Pt2 finish",
+        "content": "Box-Jenkins 4-step, ARIMA identification tables",
         "duration_hours": 1,
     },
     {
@@ -99,14 +109,14 @@ TIMETABLE = [
         "duration_hours": 3,
     },
     {
-        "id": "d13u6",
+        "id": "d13u3pt3",
         "date": "May 14",
         "day": "Thu",
-        "time": "12 AM – 1:30 AM",
+        "time": "12 AM – 1 AM",
         "subject": "forecasting",
-        "unit": "U6",
-        "content": "Delphi, groupthink, biases, qualitative methods",
-        "duration_hours": 1.5,
+        "unit": "U3 Pt3",
+        "content": "Derivation drills — AR/MA mean/variance/ACF, Ljung-Box, AIC/SBC",
+        "duration_hours": 1,
     },
 
     # ===== MAY 14 — DTE DAY 1 =====
@@ -419,6 +429,41 @@ SUBJECTS = {
         "emoji": "🔵",
         "exam_date": "May 20, 9 AM",
         "exam_name": "ECON056",
+    },
+}
+
+# Exam structure for display in the app
+EXAM_STRUCTURE = {
+    "forecasting": {
+        "label": "Forecasting (ECON053)",
+        "emoji": "🟢",
+        "total_marks": 90,
+        "sections": [
+            {"name": "Section 1", "marks": 10, "units": ["U1"], "type": "Compulsory"},
+            {"name": "Section 2", "marks": 30, "units": ["U2", "U4"], "type": "Internal choice within each"},
+            {"name": "Section 3", "marks": 40, "units": ["U3", "U5"], "type": "Internal choice within each"},
+            {"name": "Section 4", "marks": 10, "units": ["U6"], "type": "Compulsory"},
+        ],
+    },
+    "dte": {
+        "label": "Development Theory (ECON017)",
+        "emoji": "🟡",
+        "total_marks": 100,
+        "sections": [
+            {"name": "Q1", "marks": 25, "units": ["U1"], "type": "Internal choice"},
+            {"name": "Q2", "marks": 25, "units": ["U2"], "type": "Internal choice"},
+            {"name": "Q3", "marks": 25, "units": ["U3"], "type": "Internal choice"},
+            {"name": "Q4", "marks": 25, "units": ["U4"], "type": "Internal choice"},
+        ],
+    },
+    "causal": {
+        "label": "Causal Inference (ECON056)",
+        "emoji": "🔵",
+        "total_marks": 90,
+        "sections": [
+            {"name": "Compulsory", "marks": 18, "units": ["U1", "U2"], "type": "1 question, no choice"},
+            {"name": "Choice", "marks": 72, "units": ["U3", "U4"], "type": "4 out of 5 questions (18 each)"},
+        ],
     },
 }
 

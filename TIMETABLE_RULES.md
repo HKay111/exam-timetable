@@ -59,17 +59,17 @@
 |:---|:---:|:---|
 | 1 PM – 2:30 PM | 1.5 | **U1:** Six considerations, loss functions, forecast horizons |
 | 2:30 PM – 3 PM | — | Break |
-| 3 PM – 5 PM | 2 | **U2 Pt1:** MA, SMA, WMA, exponential smoothing, Holt-Winters |
-| 5 PM – 6 PM | — | Break |
-| 6 PM – 8 PM | 2 | **U2 Pt2:** Decomposition, accuracy metrics (MAE/MSE/MAPE/Theil's U), numericals |
-| 8 PM – 9 PM | — | Break |
-| 9 PM – 12 AM | 3 | **U3 Pt1:** Stationarity, AR(p), MA(q), ACF/PACF patterns |
-| 12 AM – 1 AM | — | Break |
-| 1 AM – 4 AM | 3 | **U3 Pt2:** Box-Jenkins 4-step methodology, ARIMA identification |
+| 3 PM – 4:30 PM | 1.5 | **U6:** Qualitative methods — Delphi, groupthink, biases, memory dump |
+| 4:30 PM – 5 PM | — | Break |
+| 5 PM – 7 PM | 2 | **U2 Pt1:** MA, SMA, WMA, exponential smoothing, Holt-Winters |
+| 7 PM – 8 PM | — | Break |
+| 8 PM – 10 PM | 2 | **U2 Pt2:** Decomposition, accuracy metrics (MAE/MSE/MAPE/Theil's U), numericals |
+| 10 PM – 11 PM | — | Break |
+| 11 PM – 2 AM | 3 | **U3 Pt1:** Stationarity, AR(p), MA(q), ACF/PACF patterns |
+| 2 AM – 4 AM | 2 | **U3 Pt2:** Box-Jenkins 4-step methodology start |
 
 > 🛌 Sleep by 4 AM
-
-**Pivot checkpoint:** If U1+U2+U3 done, May 13 becomes Causal pre-work.
+> 💡 U1 + U6 = both 10-mark compulsory sections — knocked out in first 3 hours.
 
 ---
 
@@ -77,7 +77,7 @@
 
 | Time | Hrs | What |
 |:---|:---:|:---|
-| 12 PM – 1 PM | 1 | **U3 Pt3:** Derivation drills — AR/MA mean, variance, ACF; Ljung-Box, AIC/SBC |
+| 12 PM – 1 PM | 1 | **U3 Pt2 finish:** Box-Jenkins 4-step, ARIMA identification tables |
 | 1 PM – 2 PM | — | Break |
 | 2 PM – 4 PM | 2 | **U4:** Multiple regression inference, t-test, F-test, Chow test |
 | 4 PM – 5 PM | — | Break |
@@ -85,10 +85,10 @@
 | 7 PM – 8 PM | — | Break |
 | 8 PM – 11 PM | 3 | **U5 Pt2:** ECM derivation, Granger causality F-test, Johansen test |
 | 11 PM – 12 AM | — | Break |
-| 12 AM – 1:30 AM | 1.5 | **U6:** Delphi, groupthink, biases, qualitative methods |
-| 1:30 AM – 4 AM | — | Buffer / Causal pre-work if Forecasting done |
+| 12 AM – 1 AM | 1 | **U3 Pt3:** Derivation drills — AR/MA mean, variance, ACF; Ljung-Box, AIC/SBC |
+| 1 AM – 4 AM | — | Buffer / Causal pre-work if Forecasting done |
 
-> 🛌 Sleep by 4 AM | If Forecasting core COMPLETE → study Causal in remaining time
+> 🛌 Sleep by 4 AM | If Forecasting core complete → study Causal in remaining time
 
 **Forecasting core complete:** U1+U2+U3+U4+U5+U6 = ~19h total. May 12-13 provides ~21h. If done early, remaining time = **Causal pre-work** (U1+U2).
 
@@ -249,7 +249,7 @@
 | Forecasting revision done early on May 16-17 | Extra rest or deeper review, no subject change |
 | Causal core done early on May 18-19 | More revision/practice problems, no subject change |
 
-**Forecasting core = U1 + U2 + U3 + U4 + U5 + U6** (~19h)
+**Forecasting core = U1 + U2 + U3 + U4 + U5 + U6** (~17h)
 **Causal pre-work = U1 + U2** (~3h)
 **DTE has no pivot** (only 2 days, exam on May 16)
 
