@@ -87,8 +87,7 @@
 | 11:15 PM – 11:30 PM | — | Short break |
 | 11:30 PM – 1:30 AM | 2 | **U5 Pt2:** ECM derivation, Granger causality, Johansen test |
 
-> 🛌 Sleep by 4 AM (or earlier if done)
-> U3 + U5 = Section 3 (40 marks) — paired together.
+> 🛌 Sleep when done (or start Causal pre-work if early)
 
 **Forecasting core complete:** U1+U2+U3+U4+U5+U6 = ~19h total. May 12-13 provides ~21h. If done early, remaining time = **Causal pre-work** (U1+U2).
 

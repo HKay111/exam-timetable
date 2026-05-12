@@ -98,16 +98,6 @@ TIMETABLE = [
         "content": "ECM derivation, Granger causality F-test, Johansen test",
         "duration_hours": 2,
     },
-    {
-        "id": "d13buffer",
-        "date": "May 14",
-        "day": "Thu",
-        "time": "1:30 AM – 4 AM",
-        "subject": "forecasting",
-        "unit": "Overflow",
-        "content": "Buffer — extra practice if behind",
-        "duration_hours": 2.5,
-    },
 
     # ===== MAY 14 — DTE DAY 1 =====
     {
