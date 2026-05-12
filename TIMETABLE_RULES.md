@@ -60,13 +60,13 @@
 | 1 PM – 2:30 PM | 1.5 | **U1:** Six considerations, loss functions, forecast horizons |
 | 2:30 PM – 3 PM | — | Break |
 | 3 PM – 4:30 PM | 1.5 | **U6:** Qualitative methods — Delphi, groupthink, biases, memory dump |
-| 4:30 PM – 6:30 PM | — | Break |
-| 6:30 PM – 8 PM | 1.5 | **U2 Pt1:** MA, SMA, WMA, exponential smoothing, Holt-Winters |
-| 8 PM – 8:30 PM | — | Break |
-| 8:30 PM – 10 PM | 1.5 | **U2 Pt2:** Decomposition, accuracy metrics (MAE/MSE/MAPE/Theil's U), numericals |
-| 10 PM – 10:30 PM | — | Break |
-| 10:30 PM – 12 AM | 1.5 | **U4:** Regression inference — t-test, F-test, Chow test |
-| **12 AM** | 🛌 | **Done for the night.** |
+| 4:30 PM – 8 PM | — | Free / rest |
+| 8 PM – 9:15 PM | 1.25 | **U2 Pt1:** MA, SMA, WMA, exponential smoothing, Holt-Winters |
+| 9:15 PM – 9:30 PM | — | Break |
+| 9:30 PM – 10:45 PM | 1.25 | **U2 Pt2:** Decomposition, accuracy metrics (MAE/MSE/MAPE/Theil's U), numericals |
+| 10:45 PM – 11 PM | — | Break |
+| 11 PM – 12:30 AM | 1.5 | **U4:** Regression inference — t-test, F-test, Chow test |
+| **12:30 AM** | 🛌 | **Done for the night.** |
 
 > 💡 U1 + U6 = both 10-mark compulsory sections — knocked out in first 3 hours.
 > U2 + U4 = Section 2 (30 marks) — paired together in one evening.
